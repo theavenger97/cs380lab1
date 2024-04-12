@@ -114,9 +114,7 @@ class Node{
 			return find(root.left, key);
 		} else {
 			return find(root.right, key);
-		}
-		
-		  
+		} 
 	   }
 	   
 	   
@@ -127,6 +125,11 @@ class Node{
 	   */
 	   public int getMin(Node root){
          //implement in here
+		 if (root.left == null) {
+            return root.value;
+        } else {
+            return getMin(root.left);
+        }
 	      
 	   }
 	  
